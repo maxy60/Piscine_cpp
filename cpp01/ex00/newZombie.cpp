@@ -1,31 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   newZombie.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 11:01:28 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/24 18:30:31 by msainton         ###   ########.fr       */
+/*   Created: 2022/09/12 13:43:32 by msainton          #+#    #+#             */
+/*   Updated: 2022/09/12 17:53:44 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Zombie.hpp"
 
-int main()
+Zombie  *newZombie(std::string name)
 {
-	Fixed	a;
-	Fixed const	b( Fixed( 5.05f ) * Fixed( 2 ) );
-	
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	
-	std::cout << b << std::endl;
-	 
-	std::cout << Fixed::max( a, b) << std::endl;
-	
-	return 0;
+    Zombie *Zombie1 = new Zombie(name);
+    return (Zombie1);
 }

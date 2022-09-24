@@ -6,10 +6,12 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 10:51:38 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/09 13:04:56 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/15 18:21:24 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef CONTACT_HPP
+# define CONTACT_HPP
 #include <iostream>
 
 class Contact {
@@ -41,3 +43,5 @@ public:
 	void	search(int index);
 	PhoneBook(int index);
 };
+
+#endif

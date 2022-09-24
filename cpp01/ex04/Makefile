@@ -1,10 +1,10 @@
-NAME	=	megaphone
-
-SRCS	=	megaphone.cpp
+NAME	=	Sed_is_for_losers
+			
+SRCS	=	main.cpp
 
 CC		=	clang++
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 OBJS	=	$(SRCS:.cpp=.o)
 

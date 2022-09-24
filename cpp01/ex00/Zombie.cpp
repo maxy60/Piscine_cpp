@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Zombie.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 11:01:28 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/24 18:30:31 by msainton         ###   ########.fr       */
+/*   Created: 2022/09/12 13:43:06 by msainton          #+#    #+#             */
+/*   Updated: 2022/09/13 11:49:01 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "Zombie.hpp"
 
-int main()
+Zombie::Zombie(std::string str)
 {
-	Fixed	a;
-	Fixed const	b( Fixed( 5.05f ) * Fixed( 2 ) );
-	
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	
-	std::cout << b << std::endl;
-	 
-	std::cout << Fixed::max( a, b) << std::endl;
-	
-	return 0;
+    std::cout << (this->name = str) << "a Zombie is create" << std::endl;
+}
+
+Zombie::~Zombie()
+{
+    std::cout << "Zombie will be destroy : " << this->name << std::endl;
+}
+
+void    Zombie::announce(void)
+{
+    std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

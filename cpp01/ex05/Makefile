@@ -1,10 +1,13 @@
-NAME	=	megaphone
-
-SRCS	=	megaphone.cpp
+NAME	=	Harl
+			
+SRCS	=	main.cpp	\
+			Harl.cpp
 
 CC		=	clang++
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+
+INCLUDE =	Harl.hpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
@@ -14,7 +17,7 @@ OBJS	=	$(SRCS:.cpp=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+		$(CC) $(CFLAGS) $(OBJS) -I $(INCLUDE) -o $(NAME)
 
 clean:
 		rm -f $(OBJS)

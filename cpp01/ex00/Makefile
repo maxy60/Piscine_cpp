@@ -1,7 +1,17 @@
-NAME	=	PhoneBook
-SRCS	=	phone_book.cpp
+NAME	=	BraiiiiiiinnnzzzZ
+
+			
+SRCS	=	Zombie.cpp		\
+			main.cpp		\
+			newZombie.cpp	\
+			randomChump.cpp
+
 CC		=	clang++
-CFLAGS	=	-Wall -Wextra -Werror
+
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+
+INCLUDE =	Zombie.hpp
+
 OBJS	=	$(SRCS:.cpp=.o)
 
 %.o:		%.cpp
@@ -10,7 +20,7 @@ OBJS	=	$(SRCS:.cpp=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+		$(CC) $(CFLAGS) $(OBJS) -I $(INCLUDE) -o $(NAME)
 
 clean:
 		rm -f $(OBJS)

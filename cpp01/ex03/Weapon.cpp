@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 11:01:28 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/24 18:30:31 by msainton         ###   ########.fr       */
+/*   Created: 2022/09/13 15:18:48 by msainton          #+#    #+#             */
+/*   Updated: 2022/09/15 18:25:56 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include <iostream>
+#include "Weapon.hpp"
 
-int main()
+Weapon::Weapon(std::string type)
 {
-	Fixed	a;
-	Fixed const	b( Fixed( 5.05f ) * Fixed( 2 ) );
-	
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	
-	std::cout << b << std::endl;
-	 
-	std::cout << Fixed::max( a, b) << std::endl;
-	
-	return 0;
+    this->type = type;
+}
+
+Weapon::~Weapon()
+{
+}
+
+void    Weapon::setType(std::string str)
+{
+    this->type = str;
+}
+
+const std::string&   Weapon::getType()
+{
+    //throw std::runtime_error("not init");
+    return this->type;
 }

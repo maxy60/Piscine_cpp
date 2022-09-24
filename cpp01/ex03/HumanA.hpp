@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/20 11:01:28 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/24 18:30:31 by msainton         ###   ########.fr       */
+/*   Created: 2022/09/13 15:19:52 by msainton          #+#    #+#             */
+/*   Updated: 2022/09/15 18:18:13 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#ifndef HUMANA_HPP
+# define HUMANA_HPP
+#endif
+#include <iostream>
+#include "Weapon.hpp"
 
-int main()
+class HumanA
 {
-	Fixed	a;
-	Fixed const	b( Fixed( 5.05f ) * Fixed( 2 ) );
-	
-	std::cout << a << std::endl;
-	std::cout << ++a << std::endl;
-	std::cout << a << std::endl;
-	std::cout << a++ << std::endl;
-	std::cout << a << std::endl;
-	
-	std::cout << b << std::endl;
-	 
-	std::cout << Fixed::max( a, b) << std::endl;
-	
-	return 0;
-}
+private:
+    std::string name;
+    Weapon      &WeaponA;
+public:
+    HumanA(std::string name, Weapon &my_weapon);
+    ~HumanA();
+    void    attack();
+    void    setWeapon(Weapon my_weapon);
+};

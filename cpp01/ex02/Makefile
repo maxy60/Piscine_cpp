@@ -1,10 +1,12 @@
-NAME	=	megaphone
+NAME	=	hi_this_is_brain
 
-SRCS	=	megaphone.cpp
+			
+SRCS	=	main.cpp		\
 
 CC		=	clang++
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+
 
 OBJS	=	$(SRCS:.cpp=.o)
 

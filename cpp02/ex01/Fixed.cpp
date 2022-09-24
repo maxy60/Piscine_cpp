@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 11:02:28 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/23 19:38:47 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/22 22:35:02 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,66 +80,3 @@ std::ostream &operator<<(std::ostream &o, Fixed const &src)
 	o << src.toFloat();
 	return (o);
 }
-
-bool	Fixed::operator>(Fixed const &src)
-{
-	if (this->_nbr > src._nbr)
-		return true;
-	return false;
-}
-
-bool	Fixed::operator<(Fixed const &src)
-{
-	if (this->_nbr < src._nbr)
-		return true;
-	return false;
-}
-
-bool	Fixed::operator>=(Fixed const &src)
-{
-	if (this->_nbr >= src._nbr)
-		return true;
-	return false;
-}
-
-bool	Fixed::operator<=(Fixed const &src)
-{
-	if (this->_nbr <= src._nbr)
-		return true;
-	return false;
-}
-
-bool	Fixed::operator==(Fixed const &src)
-{
-	if (this->_nbr == src._nbr)
-		return true;
-	return false;
-}
-
-bool	Fixed::operator!=(Fixed const &src)
-{
-	if (this->_nbr != src._nbr)
-		return true;
-	return false;
-}
-
-Fixed	Fixed::operator+(Fixed const &src)
-{
-	return (Fixed(this->toFloat() + src.toFloat()));
-}
-
-Fixed	Fixed::operator-(Fixed const &src)
-{
-	return (Fixed(this->toFloat() - src.toFloat()));
-}
-
-Fixed	Fixed::operator*(Fixed const &src)
-{
-	return (Fixed(this->toFloat() * src.toFloat()));
-}
-
-Fixed	Fixed::operator/(Fixed const &src)
-{
-	return (Fixed(this->toFloat() / src.toFloat()));
-}
-

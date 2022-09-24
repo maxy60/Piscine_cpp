@@ -1,10 +1,15 @@
-NAME	=	megaphone
+NAME	=	Moar_brainz
 
-SRCS	=	megaphone.cpp
+			
+SRCS	=	Zombie.cpp		\
+			main.cpp		\
+			zombieHorde.cpp
 
 CC		=	clang++
 
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+
+INCLUDE =	Zombie.hpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
@@ -14,7 +19,7 @@ OBJS	=	$(SRCS:.cpp=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+		$(CC) $(CFLAGS) $(OBJS) -I $(INCLUDE) -o $(NAME)
 
 clean:
 		rm -f $(OBJS)

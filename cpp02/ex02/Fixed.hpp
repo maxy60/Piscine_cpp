@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 11:01:47 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/22 16:11:23 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/24 18:28:07 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,26 @@ public:
 	float 	toFloat(void) const;
 	int		toInt(void) const;
 	Fixed 	&operator=(Fixed const &src);
+	bool	operator>(Fixed const &src);
+	bool	operator<(Fixed const &src);
+	bool	operator>=(Fixed const &src);
+	bool	operator<=(Fixed const &src);
+	bool	operator==(Fixed const &src);
+	bool	operator!=(Fixed const &src);
+	Fixed	operator+(Fixed const &src);
+	Fixed	operator-(Fixed const &src);
+	Fixed	operator*(Fixed const &src);
+	Fixed	operator/(Fixed const &src);
+	Fixed	&operator--();
+	Fixed	&operator++();
+	Fixed	operator--(int);
+	Fixed	operator++(int);
+	static Fixed	&min(Fixed &one, Fixed &two);
+	static Fixed	&max(Fixed &one, Fixed &two);
+	static Fixed	const &max(Fixed const &one, Fixed const &two);
+	static Fixed	const &min(Fixed const &one, Fixed const &two);
+
+
 	int		getRawBits() const;
     void	setRawBits(int const raw);
 };
