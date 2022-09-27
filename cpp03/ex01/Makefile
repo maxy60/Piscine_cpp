@@ -1,13 +1,14 @@
 NAME	=	action
 			
-SRCS	=	main.cpp	\
-			ClapTrap.cpp
+SRCS	=	main.cpp		\
+			ClapTrap.cpp	\
+			ScavTrap.cpp
 
 CC		=	clang++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-INCLUDE =	ClapTrap.hpp
+INCLUDE =	ScavTrap.hpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

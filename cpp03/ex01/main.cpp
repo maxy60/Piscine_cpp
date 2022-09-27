@@ -5,17 +5,17 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/26 18:57:40 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/27 12:11:36 by msainton         ###   ########.fr       */
+/*   Created: 2022/09/27 15:33:11 by msainton          #+#    #+#             */
+/*   Updated: 2022/09/27 15:40:46 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
 int main()
 {
-	ClapTrap hero("le_gentil");
-	ClapTrap le_gentil(hero);
+	ScavTrap hero("le_gentil");
+	ScavTrap le_gentil(hero);
 	
 	
 	hero.attack("le mechant");
@@ -32,6 +32,7 @@ int main()
 	hero.beRepaired(100);
 	hero.beRepaired(100);
 	hero.attack("le mechant");
+	hero.guardGate();
 	le_gentil.attack("le mechant");
 	le_gentil.beRepaired(100);
 	le_gentil.takeDamage(800);

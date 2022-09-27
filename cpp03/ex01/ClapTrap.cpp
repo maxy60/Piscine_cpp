@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/26 18:57:29 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/27 11:54:33 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/27 15:03:20 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,27 @@
 
 ClapTrap::ClapTrap() : _name("Default_name"), _Hit_point(10), _Energy_points(10), _Attack_damage(0)
 {
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap: Default constructor called" << std::endl;
 	return ;
 }
 
 ClapTrap::ClapTrap(std::string name) : _name(name), _Hit_point(10), _Energy_points(10), _Attack_damage(0)
 {
 	this->_name = name;
-	std::cout << "copie constructor called" << std::endl;
+	std::cout << "ClapTrap: constructor called" << std::endl;
 	return ;
 }
 
 ClapTrap::ClapTrap(ClapTrap const &src) : _name(src._name)
 {
 	*this = src;
-	std::cout << "copie constructor called" << std::endl;
+	std::cout << "ClapTrap copie constructor called" << std::endl;
 	return ;
 }
 
 ClapTrap::~ClapTrap()
 {
-	std::cout << "destructor called" << std::endl;
+	std::cout << "ClapTrap: destructor called" << std::endl;
 	return ;
 }
 
@@ -51,12 +51,12 @@ void	ClapTrap::attack(const std::string& target)
 {
 	if (this->_Energy_points == 0)
 	{
-		std::cout << "can't attack because ClapTrap don't have Energy point" << std::endl;
+		std::cout << "ClapTrap can't attack because ClapTrap don't have Energy point" << std::endl;
 		return ;
 	}
 	if (this->_Hit_point == 0)
 	{
-		std::cout << "can't attack because ClapTrap is dead(don't have Hit point)" << std::endl;
+		std::cout << "ClapTrap can't attack because ClapTrap is dead(don't have Hit point)" << std::endl;
 		return ;
 	}
 	std::cout << "ClapTrap " << this->_name << " attacks " << target << ", causing " << this->_Attack_damage << " points of damage!" << std::endl;
