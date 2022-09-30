@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 14:28:34 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/30 15:21:34 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/30 18:32:01 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	PhoneBook::search(int index)
 	int	i;
 
 	i = 0;
-	while (i < index && i < 9)
+	while (i < index && i < 8)
 	{
 		print(i);
 		i++;

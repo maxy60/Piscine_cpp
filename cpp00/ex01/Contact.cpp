@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 14:21:44 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/30 15:19:21 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/30 18:25:52 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,6 +84,7 @@ void	Contact::syntaxe(std::string str)
 			i++;
 		}
 	}
+	return ;
 }
 
 void	Contact::print()
