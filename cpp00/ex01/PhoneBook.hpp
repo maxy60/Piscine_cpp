@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/28 14:03:34 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/30 11:58:05 by msainton         ###   ########.fr       */
+/*   Created: 2022/09/30 14:19:00 by msainton          #+#    #+#             */
+/*   Updated: 2022/09/30 15:21:39 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
-#include "Animal.hpp"
-#include "Brain.hpp"
+#ifndef PHONEBOOK_HPP
+# define PHONEBOOK_HPP
+#include "Contact.hpp"
+#include <stdio.h>
+#include <iostream>
+#include <limits>
+#include <sstream>
 
-class Dog : public Animal
-{
+class PhoneBook {
 private:
-    Brain   *idea;
+	Contact directory[8];
+	int		index;
 public:
-	Dog();
-	Dog(Dog const &src);
-	Dog & operator=(Dog const &rhs);
-	~Dog();
-	void	makeSound(void) const;
-
+	void	add_contact_to_directory(Contact my_contact, int index);
+	void	print(int index);
+	void	print_full(int i);
+	void	search(int index);
+	PhoneBook(int index);
 };
 
 #endif

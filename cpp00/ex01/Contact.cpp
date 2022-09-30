@@ -1,22 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phone_book.cpp                                     :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/24 11:16:11 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/09 13:36:19 by msainton         ###   ########.fr       */
+/*   Created: 2022/09/30 14:21:44 by msainton          #+#    #+#             */
+/*   Updated: 2022/09/30 15:19:21 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* add search  exit*/
-
-#include <stdio.h>
-#include <iostream>
-#include <string>
-#include <limits>
-#include "contact.hpp"
+#include "Contact.hpp"
 
 Contact::Contact(void)
 {
@@ -35,30 +29,6 @@ void	Contact::param_contact(int i)
 		std::cout << "phone number : ";
 	if (i == 4)
 		std::cout << "darkest secret : ";
-}
-
-bool	empty_or_not(std::string str)
-{
-	char	c;
-	int		i;
-	int		count;
-
-	c = 1;
-	i = 0;
-	count = 0;
-	if (str == "")
-		return false;
-	while (c != '\0')
-	{
-		c = str[i];
-		if (isspace(c))
-			count++;
-		i++;
-	}
-	if (i == count +1)
-		return false;
-	else
-		return (true);
 }
 
 bool	Contact::add_contact(int i)
@@ -131,99 +101,26 @@ void	Contact::print_full()
 	
 }
 
-PhoneBook::PhoneBook(int index)
+bool	empty_or_not(std::string str)
 {
-	index = 0;
-}
+	char	c;
+	int		i;
+	int		count;
 
-void	PhoneBook::add_contact_to_directory(Contact my_contact, int index)
-{
-	if (index >= 7)
-	{
-		directory[index % 8] = my_contact;
-		this->index = index % 8;
-	}
-	else
-	{
-		directory[index] = my_contact;
-		this->index = index;
-	}
-}
-
-void	PhoneBook::print(int index)
-{
-	directory[index].syntaxe(std::to_string(index));
-	std::cout << index + 1;
-	directory[index].print();
-	std::cout << std::endl;
-}
-
-void	PhoneBook::print_full(int i)
-{
-	directory[i].print_full();
-}
-
-void	PhoneBook::search(int index)
-{
-	int	i;
-
+	c = 1;
 	i = 0;
-	while (i < index && i < 4)
+	count = 0;
+	if (str == "")
+		return false;
+	while (c != '\0')
 	{
-		print(i);
+		c = str[i];
+		if (isspace(c))
+			count++;
 		i++;
 	}
-}
-
-int main()
-{
-	int i;
-	int index;
-	int tmp;
-	Contact	contact1;
-	std::string param;
-
-	index = 0;
-	PhoneBook my_phonebook(index);
-	std::cout << "bienvenue dans ton PhoneBook" << std::endl;
-	while (1)
-	{
-		std::cin >> param;
-		if (param == "ADD")
-		{
-			std::cin.ignore();
-			i = 0;
-			while (i < 5)
-			{
-				if (contact1.add_contact(i) == false)
-					i--;
-				if (std::cin.eof())
-				{
-					std::cout << "^D" << std::endl;
-					return 0;
-				}
-				i++;
-			}
-			my_phonebook.add_contact_to_directory(contact1, index);
-			index++;
-		}
-		else if (param == "SEARCH")
-		{
-			my_phonebook.search(index);
-			std::cout << "enter index : ";
-			std::cin >> param;
-			tmp = atoi(param.c_str());
-			if ((tmp >= 1 && tmp <= 8) && tmp - 1 < index)
-				my_phonebook.print_full(tmp - 1);
-			else
-				std::cout << "needed a correct value" << std::endl;
-		}
-		else if (param == "EXIT")
-			break ;
-		else if (std::cin.eof())
-		{
-			std::cout << "^D" << std::endl << "EXIT" << std::endl;
-			break ;
-		}
-	}
+	if (i == count +1)
+		return false;
+	else
+		return (true);
 }

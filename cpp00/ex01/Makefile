@@ -1,10 +1,15 @@
 NAME	=	PhoneBook
 
-SRCS	=	phone_book.cpp
+SRCS	=	main.cpp		\
+			PhoneBook.cpp	\
+			Contact.cpp
 
 CC		=	clang++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+
+INCLUDE =	PhoneBook.hpp	\
+			Contact.hpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
@@ -14,7 +19,7 @@ OBJS	=	$(SRCS:.cpp=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
+		$(CC) $(CFLAGS) $(OBJS) -I include -o $(NAME)
 
 clean:
 		rm -f $(OBJS)

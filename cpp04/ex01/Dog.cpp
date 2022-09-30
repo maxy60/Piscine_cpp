@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:03:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/29 14:59:08 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:21:25 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Dog::Dog() : Animal()
 {
 	this->_type = "Dog";
+    this->idea = new Brain();
 	std::cout << "Dog: Default constructor called" << std::endl;
 	return ;
 }
@@ -28,6 +29,7 @@ Dog::Dog(Dog const &src)
 Dog::~Dog()
 {
 	std::cout << "Dog: destructor called" <<std::endl;
+    delete idea;
 	return ;
 }
 

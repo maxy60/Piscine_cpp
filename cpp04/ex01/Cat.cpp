@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:22:51 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/29 14:59:03 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/30 12:21:11 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Cat::Cat() : Animal()
 {
 	this->_type = "Cat";
+    this->idea = new Brain();
 	std::cout << "Cat: Default constructor called" << std::endl;
 	return ;
 }
@@ -28,6 +29,7 @@ Cat::Cat(Cat const &src) : Animal::Animal(src)
 Cat::~Cat()
 {
 	std::cout << "Cat: destructor called" <<std::endl;
+    delete idea;
 	return ;
 }
 

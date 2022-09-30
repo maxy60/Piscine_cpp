@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:36:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/29 15:00:48 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/30 13:28:18 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@
 #include "WrongCat.hpp"
 
 int main()
+{
+    Animal Animaux[5];
+    Animal[0] = new Dog(); 
+    
+}
+
+/*int main()
 {
 	Animal	*Murloc = new Animal();
 	Animal	*Tupac = new Dog();
@@ -42,4 +49,4 @@ int main()
 	delete meta;
 	delete i;
 	return 0;
-}
+}*/

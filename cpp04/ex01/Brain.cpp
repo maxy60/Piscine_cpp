@@ -1,31 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.hpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/28 14:03:34 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/30 11:58:05 by msainton         ###   ########.fr       */
+/*   Created: 2022/09/30 11:22:54 by msainton          #+#    #+#             */
+/*   Updated: 2022/09/30 11:58:45 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DOG_HPP
-# define DOG_HPP
-#include "Animal.hpp"
 #include "Brain.hpp"
 
-class Dog : public Animal
+Brain::Brain()
 {
-private:
-    Brain   *idea;
-public:
-	Dog();
-	Dog(Dog const &src);
-	Dog & operator=(Dog const &rhs);
-	~Dog();
-	void	makeSound(void) const;
+	this->_ideas;
+	std::cout << "Brain: Default constructor called" << std::endl;
+	return ;
+}
 
-};
+Brain::Brain(Brain const &src)
+{
+	*this = src;
+	std::cout << "Brain: copie constructor called" << std::endl;
+}
 
-#endif
+Brain::~Brain()
+{
+	std::cout << "Brain: destructor called" <<std::endl;
+	return ;
+}
+
+Brain & Brain::operator=(Brain const &rhs)
+{
+	//this->_ideas = rhs._ideas;
+	return (*this);
+}

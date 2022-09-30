@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 10:51:38 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/15 18:21:24 by msainton         ###   ########.fr       */
+/*   Updated: 2022/09/30 15:20:11 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,6 @@ public:
 	Contact();
 };
 
-class PhoneBook {
-private:
-	Contact directory[8];
-	int		index;
-public:
-	void	add_contact_to_directory(Contact my_contact, int index);
-	void	print(int index);
-	void	print_full(int i);
-	void	search(int index);
-	PhoneBook(int index);
-};
+bool    empty_or_not(std::string str);
 
 #endif
