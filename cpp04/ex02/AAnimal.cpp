@@ -1,48 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:44:33 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 12:26:46 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:38:02 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal() : _type("probably a murloc")
+AAnimal::AAnimal() : _type("probably a murloc")
 {
-	std::cout << "Animal: Default constructor called" << std::endl;
+	std::cout << "AAnimal: Default constructor called" << std::endl;
 	return ;
 }
 
-Animal::Animal(Animal const &src) : _type(src._type)
+AAnimal::AAnimal(AAnimal const &src) : _type(src._type)
 {
 	*this = src;
-	std::cout << "Animal: copie constructor called" << std::endl;
+	std::cout << "AAnimal: copie constructor called" << std::endl;
 }
 
-Animal::~Animal()
+AAnimal::~AAnimal()
 {
-	std::cout << "Animal: destructor called" <<std::endl;
+	std::cout << "AAnimal: destructor called" <<std::endl;
 	return ;
 }
 
-Animal & Animal::operator=(Animal const &rhs)
+AAnimal & AAnimal::operator=(AAnimal const &rhs)
 {
 	this->_type = rhs._type;
 	return (*this);
 }
 
-const std::string	Animal::get_type() const
+const std::string	AAnimal::get_type() const
 {
 	return (this->_type);
-}
-
-void	Animal::makeSound() const
-{
-	std::cout << this->get_type() << ": this animal make a very strange noise" << std::endl;
-	return ;
 }

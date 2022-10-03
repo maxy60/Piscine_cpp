@@ -1,7 +1,7 @@
 NAME	=	Polymorphisme
 			
 SRCS	=	main.cpp		\
-			Animal.cpp		\
+			AAnimal.cpp		\
 			Dog.cpp			\
 			Cat.cpp			\
 			WrongAnimal.cpp	\
@@ -12,7 +12,7 @@ CC		=	clang++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-INCLUDES =	Animal.hpp		\
+INCLUDES =	AAnimal.hpp		\
 			Dog.hpp			\
 			Cat.hpp			\
 			WrongAnimal.hpp	\

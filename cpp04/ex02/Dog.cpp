@@ -6,13 +6,13 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:03:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 12:13:36 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:51:22 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog() : AAnimal()
 {
 	this->_type = "Dog";
     this->idea = new Brain();
@@ -20,7 +20,7 @@ Dog::Dog() : Animal()
 	return ;
 }
 
-Dog::Dog(Dog const &src)
+Dog::Dog(Dog const &src) : AAnimal::AAnimal(src)
 {
 	*this = src;
 	std::cout << "Dog: copie constructor called" << std::endl;
@@ -33,9 +33,10 @@ Dog::~Dog()
 	return ;
 }
 
-Dog & Dog::operator=(Dog const &rhs)
+Dog & Dog::operator=(AAnimal const &rhs)
 {
-	this->_type = rhs._type;
+	this->_type = rhs.get_type();
+	this->idea = rhs.get_brain();
 	return (*this);
 }
 

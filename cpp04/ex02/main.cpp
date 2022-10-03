@@ -6,11 +6,11 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:36:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 12:24:54 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/03 15:45:12 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
@@ -19,7 +19,7 @@
 
 int main()
 {
-    Animal *Animaux[5];
+    AAnimal *Animaux[5];
 	
 	for (int i = 0; i <= 5; i++)
 	{
@@ -48,9 +48,9 @@ int main()
 
 /*int main()
 {
-	Animal	*Murloc = new Animal();
-	Animal	*Tupac = new Dog();
-	Animal	*Kimy = new Cat();
+	AAnimal	*Murloc = new AAnimal();
+	AAnimal	*Tupac = new Dog();
+	AAnimal	*Kimy = new Cat();
 	WrongAnimal	*meta = new WrongAnimal();
 	WrongAnimal *i = new WrongCat();
 

@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:36:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 12:24:54 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/03 19:13:49 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,11 @@ int main()
 	my_idea = Animaux[0]->get_brain();
 	my_idea->_ideas[0] = "test";
 	my_idea->_ideas[1] = "other test";
-	std::cout << Animaux[0]->get_brain()->_ideas[0] << std::endl;
-	std::cout << Animaux[0]->get_brain()->_ideas[1] << std::endl;
+	std::cout << "dog 0: " << Animaux[0]->get_brain()->_ideas[0] << std::endl;
+	std::cout << "dog 0: " << Animaux[0]->get_brain()->_ideas[1] << std::endl;
+	*(Animaux[1]) = *(Animaux[0]);
+	std::cout << "dog 1: " << Animaux[1]->get_brain()->_ideas[0] << std::endl;
+	std::cout << "dog 1: " << Animaux[1]->get_brain()->_ideas[1] << std::endl;
 	for (int j = 0; j <= 5; j++)
 		delete Animaux[j];
 }

@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:22:51 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 12:16:02 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/03 16:22:18 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,37 @@
 Cat::Cat() : Animal()
 {
 	this->_type = "Cat";
-    this->idea = new Brain();
+    this->_idea = new Brain();
 	std::cout << "Cat: Default constructor called" << std::endl;
 	return ;
 }
 
 Cat::Cat(Cat const &src) : Animal::Animal(src)
 {
-	*this = src;
+	this->_type = "Cat";
+	this->_idea = new Brain();
+	*(this->_idea) = *(src.get_brain());
 	std::cout << "Cat: copie constructor called" << std::endl;
 }
 
 Cat::~Cat()
 {
 	std::cout << "Cat: destructor called" <<std::endl;
-    delete idea;
+    delete this->_idea;
 	return ;
 }
 
 Cat & Cat::operator=(Cat const &rhs)
 {
 	this->_type = rhs._type;
+	*(this->_idea) = *(rhs.get_brain());
+	return (*this);
+}
+
+Animal & Cat::operator=(Animal const &rhs)
+{
+	this->_type = rhs.get_type();
+	*(this->_idea) = *(rhs.get_brain());
 	return (*this);
 }
 
@@ -47,5 +57,5 @@ void	Cat::makeSound() const
 
 Brain	*Cat::get_brain()const
 {
-	return (this->idea);
+	return (this->_idea);
 }
