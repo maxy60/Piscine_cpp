@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:03:34 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 19:15:33 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/04 21:41:21 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Dog(Dog const &src);
 	Dog & operator=(Dog const &rhs);
 	Animal & operator=(Animal const &rhs);
-	~Dog();
+	virtual	~Dog();
 	void	makeSound(void) const;
 	Brain	*get_brain()const;
 

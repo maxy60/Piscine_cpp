@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:22:22 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 18:52:48 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/04 21:41:31 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Cat(Cat const &src);
 	Cat & operator=(Cat const &rhs);
 	Animal & operator=(Animal const &rhs);
-	~Cat();
+	virtual	~Cat();
 	void	makeSound(void) const;
 	Brain	*get_brain()const;
 };

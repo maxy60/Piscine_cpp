@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 13:44:40 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 15:37:14 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:49:13 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ protected:
 public:
 	AAnimal();
 	AAnimal(AAnimal const &src);
-	virtual AAnimal & operator=(AAnimal const &rhs) = 0;
+	AAnimal & operator=(AAnimal const &rhs) = 0;
 	virtual ~AAnimal() = 0;
 	const std::string	get_type()const;
 	virtual void	makeSound(void) const = 0;

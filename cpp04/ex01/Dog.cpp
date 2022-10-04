@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:03:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 19:32:13 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/04 20:57:41 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ Dog::Dog() : Animal()
 
 Dog::Dog(Dog const &src) : Animal::Animal(src)
 {
-	*this = src;
+	this->_type = src.get_type();
+	this->_idea = new Brain();
+	*(this->_idea) = *(src.get_brain());
 	std::cout << "Dog: copie constructor called" << std::endl;
 }
 
@@ -36,6 +38,7 @@ Dog::~Dog()
 Dog & Dog::operator=(Dog const &rhs)
 {
 	this->_type = rhs._type;
+	*(this->_idea) = *(rhs.get_brain());
 	return (*this);
 }
 
