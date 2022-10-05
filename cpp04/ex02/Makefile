@@ -1,4 +1,4 @@
-NAME	=	Polymorphisme
+NAME	=	Abstract_class
 			
 SRCS	=	main.cpp		\
 			AAnimal.cpp		\

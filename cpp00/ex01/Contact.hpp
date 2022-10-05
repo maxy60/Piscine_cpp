@@ -6,13 +6,14 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/24 10:51:38 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/30 15:20:11 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/05 13:22:13 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 #include <iostream>
+#include <iomanip>
 
 class Contact {
 private:
@@ -29,6 +30,8 @@ public:
 	void		syntaxe(std::string str);
 	void		print();
 	void		print_full();
+    void        set_first_name(std::string s);
+    std::string get_first_name();
 	Contact();
 };
 

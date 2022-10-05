@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 14:21:44 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/30 18:25:52 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/05 13:22:56 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,16 +74,9 @@ void	Contact::syntaxe(std::string str)
 {
 		int i;
 	
-	i = 0;
+	i = str.length();
 	std::cout << '|';
-	if ((i = str.length()) <= 9)
-	{
-		while (i < 10)
-		{
-			std::cout << ' ';
-			i++;
-		}
-	}
+    std::cout << std::setw(10);
 	return ;
 }
 
@@ -124,4 +117,15 @@ bool	empty_or_not(std::string str)
 		return false;
 	else
 		return (true);
+}
+
+void    Contact::set_first_name(std::string s)
+{
+    this->first_name = s;
+    return ;
+}
+
+std::string Contact::get_first_name()
+{
+    return (this->first_name);
 }
