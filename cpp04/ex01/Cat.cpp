@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:22:51 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 16:22:18 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/05 14:40:37 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ Cat::Cat() : Animal()
 
 Cat::Cat(Cat const &src) : Animal::Animal(src)
 {
-	this->_type = "Cat";
+	this->_type = src.get_type();
 	this->_idea = new Brain();
 	*(this->_idea) = *(src.get_brain());
 	std::cout << "Cat: copie constructor called" << std::endl;

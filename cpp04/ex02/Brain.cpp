@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/30 11:22:54 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 11:57:36 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/05 14:58:41 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ Brain::~Brain()
 
 Brain & Brain::operator=(Brain const &rhs)
 {
-	for (size_t i = 0; i <= 100; i++)
+	for (size_t i = 0; i < 100; i++)
 		this->_ideas[i] = rhs._ideas[i];
 	return (*this);
 }

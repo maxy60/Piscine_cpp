@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:30:34 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/29 14:58:47 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/05 15:40:15 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ WrongAnimal::WrongAnimal(WrongAnimal const &src) : _type(src._type)
 
 WrongAnimal::~WrongAnimal()
 {
-	std::cout << "WrongAnimal: destructor called" <<std::endl;
+	std::cout << "WrongAnimal: destructor called" << std::endl;
 	return ;
 }
 

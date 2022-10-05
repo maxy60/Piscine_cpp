@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:22:22 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/03 15:43:22 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/05 16:16:57 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,12 @@
 class Cat : public AAnimal
 {
 private:
-    Brain   *idea;
+    Brain   *_idea;
 public:
 	Cat();
 	Cat(Cat const &src);
-	Cat & operator=(AAnimal const &rhs);
+	Cat & operator=(Cat const &rhs);
+    AAnimal & operator=(AAnimal const &rhs);
 	~Cat();
 	void	makeSound(void) const;
 	Brain	*get_brain()const;

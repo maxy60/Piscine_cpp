@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:36:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/04 21:18:41 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/05 14:38:24 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,11 +39,11 @@ int main()
 	my_idea = Animaux[0]->get_brain();
 	my_idea->_ideas[0] = "test";
 	my_idea->_ideas[1] = "other test";
-	std::cout << Animaux[0]->get_type() << Animaux[0]->get_brain()->_ideas[0] << std::endl;
-	std::cout << Animaux[0]->get_type() << Animaux[0]->get_brain()->_ideas[1] << std::endl;
+	std::cout << Animaux[0]->get_type() << ": " << Animaux[0]->get_brain()->_ideas[0] << std::endl;
+	std::cout << Animaux[0]->get_type() << ": " << Animaux[0]->get_brain()->_ideas[1] << std::endl;
 	*(Animaux[1]) = *(Animaux[0]);
-	std::cout << Animaux[1]->get_type() << Animaux[1]->get_brain()->_ideas[0] << std::endl;
-	std::cout << Animaux[1]->get_type() << Animaux[1]->get_brain()->_ideas[1] << std::endl;
+	std::cout << Animaux[1]->get_type() << ": " << Animaux[1]->get_brain()->_ideas[0] << std::endl;
+	std::cout << Animaux[1]->get_type() << ": " << Animaux[1]->get_brain()->_ideas[1] << std::endl;
 	for (int j = 0; j < 5; j++)
 		delete Animaux[j];
 }
