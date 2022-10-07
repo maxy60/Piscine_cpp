@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:11:17 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/06 14:41:02 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/07 11:54:57 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
     Bureaucrat & operator=(Bureaucrat const &rhs);
     ~Bureaucrat();
     std::string const getName();
+    void    upGrade();
+    void    downGrade();
     int     getGrade() const;
     void    setGrade(int i);
     class GradeTooHighException : public std::exception

@@ -8,7 +8,7 @@ SRCS	=	main.cpp		\
 			WrongCat.cpp	\
 			Brain.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 

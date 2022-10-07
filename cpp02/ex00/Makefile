@@ -3,7 +3,7 @@ NAME	=	my_first_canon
 SRCS	=	main.cpp	\
 			Fixed.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 

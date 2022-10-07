@@ -5,7 +5,7 @@ SRCS	=	Zombie.cpp		\
 			main.cpp		\
 			zombieHorde.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 

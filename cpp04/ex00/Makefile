@@ -7,7 +7,7 @@ SRCS	=	main.cpp		\
 			WrongAnimal.cpp	\
 			WrongCat.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 

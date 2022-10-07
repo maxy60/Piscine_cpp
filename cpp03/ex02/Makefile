@@ -5,7 +5,7 @@ SRCS	=	main.cpp		\
 			ScavTrap.cpp	\
 			FragTrap.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 

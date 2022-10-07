@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 11:21:47 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/16 19:03:40 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/07 11:01:27 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,11 +40,11 @@ void	my_replace(std::ifstream &file, char *s1, char *s2, std::string filename)
 
 	s1bis = s1;
 	filename.append(dote);
-    std::ofstream	replace(filename.c_str());
-    if (replace.bad())
+    std::ofstream	repl(filename.c_str());
+    if (repl.bad())
 	{
 		std::cout << "ERROR: the file could not be open" << std::endl;
-		replace.close();
+		repl.close();
 		return ;
     }
 	while (std::getline(file, line))
@@ -52,14 +52,13 @@ void	my_replace(std::ifstream &file, char *s1, char *s2, std::string filename)
 		pos = line.find(s1bis);
 		while (pos != std::string::npos)
 		{
-			std::cout << "imhere"<< std::endl;
 			line.erase(pos, s1bis.length());
 			line.insert(pos, s2);
 			pos = line.find(s1bis);
 		}
-		replace << line << std::endl;
+		repl << line << std::endl;
 	}
-	replace.close();
+	repl.close();
 }
 
 int main(int ac, char **av)

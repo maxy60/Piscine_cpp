@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:11:43 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/06 15:57:02 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/07 11:58:28 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,10 @@ void    Bureaucrat::setGrade(int i)
 {
     //si mon grade est trop haut => throw Bureaucrat::GradeException();
     this->_grade = i;
+    if (_grade > 150)
+        throw(Bureaucrat::GradeTooHighException());
+    else if (_grade < 1)
+        throw(Bureaucrat::GradeTooLowException());
     return ;
 }
 
@@ -66,4 +70,14 @@ const char *Bureaucrat::GradeTooHighException::what() const throw()
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
     return ("Bureaucrat Grade is to Low");
+}
+
+void    Bureaucrat::upGrade()
+{
+    this->_grade--;
+}
+
+void    Bureaucrat::downGrade()
+{
+    this->_grade++;
 }

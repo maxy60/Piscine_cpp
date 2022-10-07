@@ -2,11 +2,13 @@ NAME	=	Sed_is_for_losers
 			
 SRCS	=	main.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
 OBJS	=	$(SRCS:.cpp=.o)
+
+REP		=	*.replace
 
 %.o:		%.cpp
 		$(CC) $(CFLAGS) -c $< -o $@
@@ -18,6 +20,7 @@ $(NAME):	$(OBJS)
 
 clean:
 		rm -f $(OBJS)
+		rm -f $(REP)
 
 fclean: clean
 		rm -f $(NAME)

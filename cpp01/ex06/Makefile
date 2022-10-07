@@ -3,7 +3,7 @@ NAME	=	HarlFilter
 SRCS	=	main.cpp	\
 			Harl.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 

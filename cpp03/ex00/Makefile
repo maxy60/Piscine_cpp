@@ -3,7 +3,7 @@ NAME	=	action
 SRCS	=	main.cpp	\
 			ClapTrap.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
