@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanA.hpp                                         :+:      :+:    :+:   */
+/*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/13 15:19:52 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/07 22:40:49 by msainton         ###   ########.fr       */
+/*   Created: 2022/10/11 16:11:04 by msainton          #+#    #+#             */
+/*   Updated: 2022/10/11 16:12:30 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef HUMANA_HPP
-# define HUMANA_HPP
-#endif
+#ifndef PRESIDENTIALPARDONFORM_HPP
+# define PRESIDENTIALPARDONFORM_HPP
 #include <iostream>
-#include "Weapon.hpp"
+#include "AForm.hpp"
 
-class HumanA
+class PresidentialPardonForm : public AForm
 {
 private:
-    std::string name;
-    Weapon      &WeaponA;
+	std::string _target;
 public:
-    HumanA(std::string name, Weapon &my_weapon);
-    ~HumanA();
-    void    attack();
-    void    setWeapon(Weapon my_weapon);
+	PresidentialPardonForm(std::string target);
+	PresidentialPardonForm(PresidentialPardonForm const &src);
+	PresidentialPardonForm & operator=(PresidentialPardonForm const &rhs);
+	~PresidentialPardonForm();
+	void	beExec() const;
+	std::string getTarget() const;
 };
+
+#endif
