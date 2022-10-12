@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:04:51 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/11 21:17:28 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:41:58 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,21 @@ Intern & Intern::operator=(Intern const &rhs)
 AForm	*Intern::robotomy(std::string target)
 {
 	AForm	*request = new RobotomyRequestForm(target);
+	std::cout << "Intern creates RobotomyRequestForm for " << target << std::endl;
 	return (request);
 }
 
 AForm	*Intern::shrubbery(std::string target)
 {
-	AForm	*request = new RobotomyRequestForm(target);
+	AForm	*request = new ShrubberyCreationForm(target);
+	std::cout << "Intern creates ShrubberyCreationForm for " << target << std::endl;
 	return (request);
 }
 
 AForm	*Intern::presidential(std::string target)
 {
-	AForm	*request = new RobotomyRequestForm(target);
+	AForm	*request = new PresidentialPardonForm(target);
+	std::cout << "Intern creates PresidentialPardonForm for " << target << std::endl;
 	return (request);
 }
 

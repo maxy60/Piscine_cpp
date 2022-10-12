@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:04:38 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/11 21:05:40 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:36:39 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define INTERN_HPP
 #include "AForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "ShrubberyCreationForm.hpp"
+#include "PresidentialPardonForm.hpp"
 
 class Intern
 {

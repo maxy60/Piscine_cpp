@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:24:30 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/11 21:17:37 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/12 17:44:42 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,46 @@ int main()
 		Intern Larbin;
 		AForm	*rrf;
 		rrf = Larbin.makeForm("robotomy request", "Bender");
-		employed.signForm();
 		delete rrf;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	std::cout << std::endl << std::endl;
+	try
+	{
+		Bureaucrat employed(20, "Joey");
+		Intern Larbin;
+		AForm	*srf;
+		srf = Larbin.makeForm("shrubbery request", "forest");
+		delete srf;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	std::cout << std::endl << std::endl;
+	try
+	{
+		Bureaucrat employed(20, "Joey");
+		Intern Larbin;
+		AForm	*prf;
+		prf = Larbin.makeForm("presidential request", "Kennedy");
+		delete prf;
+	}
+	catch(const std::exception& e)
+	{
+		std::cerr << e.what() << '\n';
+	}
+	std::cout << std::endl << std::endl;
+	try
+	{
+		Bureaucrat employed(20, "Joey");
+		Intern Larbin;
+		AForm	*erf;
+		erf = Larbin.makeForm("bad request", "forest");
+		delete erf;
 	}
 	catch(const std::exception& e)
 	{
