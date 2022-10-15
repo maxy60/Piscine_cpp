@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:24:30 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/12 17:44:42 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/13 16:52:30 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ int main()
 		Intern Larbin;
 		AForm	*rrf;
 		rrf = Larbin.makeForm("robotomy request", "Bender");
+		rrf->beSigned(employed);
+		rrf->execute(employed);
 		delete rrf;
 	}
 	catch(const std::exception& e)
@@ -34,7 +36,6 @@ int main()
 	std::cout << std::endl << std::endl;
 	try
 	{
-		Bureaucrat employed(20, "Joey");
 		Intern Larbin;
 		AForm	*srf;
 		srf = Larbin.makeForm("shrubbery request", "forest");
@@ -47,7 +48,6 @@ int main()
 	std::cout << std::endl << std::endl;
 	try
 	{
-		Bureaucrat employed(20, "Joey");
 		Intern Larbin;
 		AForm	*prf;
 		prf = Larbin.makeForm("presidential request", "Kennedy");
@@ -60,7 +60,6 @@ int main()
 	std::cout << std::endl << std::endl;
 	try
 	{
-		Bureaucrat employed(20, "Joey");
 		Intern Larbin;
 		AForm	*erf;
 		erf = Larbin.makeForm("bad request", "forest");
