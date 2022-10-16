@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:58:44 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/16 03:03:05 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/16 03:29:49 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,14 +55,12 @@ void	ConvertType::Good_type()
 	strtol(_str, &i, 10);
 	if (!(*i))
 	{
-		std::cout << "iiiiii" << std::endl;
 		int_convert();
 		return ;
 	}
 	strtod(_str, &d);
 	if (!(*d))
 	{
-		std::cout << "ddd" << std::endl;
 		double_convert();
 		return ;
 	}
@@ -77,7 +75,6 @@ void	ConvertType::Good_type()
 	strtof(_str, &f);
 	if (!(*f))
 	{
-		std::cout << "ffff" << std::endl;
 		float_convert();
 		return ;
 	}
