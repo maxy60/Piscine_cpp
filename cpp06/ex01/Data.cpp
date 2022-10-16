@@ -1,40 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ConvertType.hpp                                    :+:      :+:    :+:   */
+/*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/15 16:58:38 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/16 12:44:34 by msainton         ###   ########.fr       */
+/*   Created: 2022/10/16 20:55:52 by msainton          #+#    #+#             */
+/*   Updated: 2022/10/16 21:04:11 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
-#include <cstdlib>
-#include <limits.h>
-#include <math.h>
 
-class ConvertType
+struct Data
 {
-private:
-	char	*_str;
-	char	_c;
-	int		_i;
-	float	_f;
-	double	_d;
-public:
-	ConvertType();
-	ConvertType(char *str);
-	ConvertType(ConvertType const &src);
-	ConvertType	& operator=(ConvertType const &rhs);
-	~ConvertType();
-	void	Good_type();
-	void	char_convert();
-	void	int_convert();
-	void	float_convert();
-	void	double_convert();
-	void	print();
-	
+	int i;
 };
 
+uintptr_t serialize(Data *ptr)
+{
+	return (static_cast<uintptr_t>(ptr));
+}
+
+Data	*deserialize(uintptr_t raw)
+{
+	
+}

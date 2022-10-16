@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:58:44 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/16 03:29:49 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/16 12:58:17 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,12 +124,14 @@ void	ConvertType::double_convert()
 void	ConvertType::print()
 {
 	std::cout << "char: "; 
-	if (this->_i > CHAR_MAX || this->_i < 32)
+	if (isnan(this->_d))
+		std::cout << "impossible" << std::endl;
+	else if (this->_i > CHAR_MAX || this->_i < 32)
 		std::cout << "Non displayable" << std::endl;
 	else
 		std::cout << "'" << this->_c << "'" << std::endl;
 	std::cout << "int: "; 
-	if (this->_i > INT_MAX || this->_i < INT_MIN)
+	if (this->_i > INT_MAX || this->_i < INT_MIN || isnan(this->_d))
 		std::cout << "impossible" << std::endl;
 	else
 		std::cout << this->_i << std::endl;
