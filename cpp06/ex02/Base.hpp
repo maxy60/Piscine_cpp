@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 13:43:16 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/17 16:37:19 by msainton         ###   ########.fr       */
+/*   Created: 2022/10/17 18:32:51 by msainton          #+#    #+#             */
+/*   Updated: 2022/10/17 18:41:26 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-# define DATA_HPP
-#include <iostream>
-#include <stdint.h>
+#ifndef BASE_HPP
+# define BASE_HPP
 
-struct Data
+class Base
 {
-	int i;
-    char c;
+public:
+    Base();
+    virtual ~Base();
 };
-
-uintptr_t serialize(Data *ptr);
-Data	*deserialize(uintptr_t raw);
 
 #endif

@@ -1,14 +1,20 @@
-NAME	=	serialisation
+NAME	=	Identify_the_real_type
 
 			
 SRCS	=	main.cpp			\
-			Data.cpp
+			Base.cpp			\
+			A.cpp				\
+			B.cpp				\
+			C.cpp
 
 CC		=	clang++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
-INCLUDE =	Data.hpp
+INCLUDE =	Base.hpp	\
+			A.hpp		\
+			B.hpp		\
+			C.hpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 

@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 13:43:16 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/17 16:37:19 by msainton         ###   ########.fr       */
+/*   Created: 2022/10/17 13:41:22 by msainton          #+#    #+#             */
+/*   Updated: 2022/10/17 16:58:22 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-# define DATA_HPP
-#include <iostream>
-#include <stdint.h>
+#include "Data.hpp"
 
-struct Data
+int main()
 {
-	int i;
-    char c;
-};
-
-uintptr_t serialize(Data *ptr);
-Data	*deserialize(uintptr_t raw);
-
-#endif
+    Data    my_data;
+    Data    *my_databis;
+    my_data.c = 'c';
+    my_data.i = 1;
+    std::cout << &my_data << " char = " << my_data.c << " int = " << my_data.i << std::endl;
+    my_databis = deserialize(serialize(&my_data));
+    std::cout << &my_databis << " bchar = " << my_databis->c << " bint = " << my_databis->i << std::endl;
+}

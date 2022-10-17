@@ -1,27 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/17 13:43:16 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/17 16:37:19 by msainton         ###   ########.fr       */
+/*   Created: 2022/10/17 18:34:40 by msainton          #+#    #+#             */
+/*   Updated: 2022/10/17 18:42:15 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA_HPP
-# define DATA_HPP
-#include <iostream>
-#include <stdint.h>
+#ifndef A_HPP
+# define A_HPP
+#include "Base.hpp"
 
-struct Data
+class A : public Base
 {
-	int i;
-    char c;
+public:
+    A();
+    ~A();
 };
-
-uintptr_t serialize(Data *ptr);
-Data	*deserialize(uintptr_t raw);
 
 #endif
