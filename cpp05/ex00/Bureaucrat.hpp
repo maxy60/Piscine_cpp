@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:11:17 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/10 15:52:57 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/17 11:23:56 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,6 @@ public:
 
 };
 
-std::ostream 	&operator<<(std::ostream &o, Bureaucrat const &src);
+std::ostream & operator<<(std::ostream &o, Bureaucrat const &rhs);
 
 #endif
