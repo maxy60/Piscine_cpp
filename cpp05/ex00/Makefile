@@ -4,7 +4,7 @@ NAME	=	iwill_be_bureaucrat
 SRCS	=	Bureaucrat.cpp	\
 			main.cpp
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 

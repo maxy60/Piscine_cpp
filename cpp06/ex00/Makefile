@@ -4,7 +4,7 @@ NAME	=	convert
 SRCS	=	main.cpp			\
 			ConvertType.cpp		\
 
-CC		=	clang++
+CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
 
