@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:11:43 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/11 09:37:47 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 15:28:29 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ Bureaucrat::Bureaucrat(Bureaucrat const &src) : _name(src._name), _grade(src._gr
 
 Bureaucrat & Bureaucrat::operator=(Bureaucrat const &rhs)
 {
+   // *((std::string *)&rhs._name) = rhs._name;
     this->_grade = rhs.getGrade();
     return (*this);
 }

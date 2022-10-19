@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 15:33:11 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/28 12:27:14 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/18 14:47:27 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int main()
 {
-	FragTrap hero("le_gentil");
+	FragTrap hero("le gentil");
 	FragTrap le_gentil(hero);
 	
 	
