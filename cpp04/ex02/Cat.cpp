@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:22:51 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/05 16:16:55 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:28:13 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ Cat & Cat::operator=(Cat const &rhs)
 
 AAnimal & Cat::operator=(AAnimal const &rhs)
 {
-	this->_type = rhs.get_type();
 	*(this->_idea) = *(rhs.get_brain());
 	return (*this);
 }

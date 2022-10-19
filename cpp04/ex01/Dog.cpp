@@ -6,13 +6,13 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:03:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/04 20:57:41 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:21:11 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal()
+Dog::Dog()
 {
 	this->_type = "Dog";
     this->_idea = new Brain();
@@ -20,7 +20,7 @@ Dog::Dog() : Animal()
 	return ;
 }
 
-Dog::Dog(Dog const &src) : Animal::Animal(src)
+Dog::Dog(Dog const &src)
 {
 	this->_type = src.get_type();
 	this->_idea = new Brain();
@@ -44,7 +44,6 @@ Dog & Dog::operator=(Dog const &rhs)
 
 Animal & Dog::operator=(Animal const &rhs)
 {
-	this->_type = rhs.get_type();
 	*(this->_idea) = *(rhs.get_brain());
 	return (*this);
 }

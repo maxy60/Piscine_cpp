@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:30:46 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/29 15:09:03 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 16:43:24 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ WrongCat::WrongCat() : WrongAnimal()
 	return ;
 }
 
-WrongCat::WrongCat(WrongCat const &src) : WrongAnimal::WrongAnimal(src)
+WrongCat::WrongCat(WrongCat const &src)
 {
 	*this = src;
 	std::cout << "WrongCat: copie constructor called" << std::endl;

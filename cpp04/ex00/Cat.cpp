@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:22:51 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/29 14:59:03 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 16:42:10 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Cat::Cat() : Animal()
 	return ;
 }
 
-Cat::Cat(Cat const &src) : Animal::Animal(src)
+Cat::Cat(Cat const &src)
 {
 	*this = src;
 	std::cout << "Cat: copie constructor called" << std::endl;

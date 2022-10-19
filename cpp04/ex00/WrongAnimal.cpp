@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/29 12:30:34 by msainton          #+#    #+#             */
-/*   Updated: 2022/09/29 14:58:47 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 16:43:07 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ WrongAnimal::WrongAnimal() : _type("probably a murloc")
 	return ;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal const &src) : _type(src._type)
+WrongAnimal::WrongAnimal(WrongAnimal const &src)
 {
 	*this = src;
 	std::cout << "WrongAnimal: copie constructor called" << std::endl;

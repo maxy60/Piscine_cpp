@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:03:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/05 16:16:50 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:27:37 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,6 @@ Dog & Dog::operator=(Dog const &rhs)
 
 AAnimal & Dog::operator=(AAnimal const &rhs)
 {
-	this->_type = rhs.get_type();
 	*(this->_idea) = *(rhs.get_brain());
 	return (*this);
 }

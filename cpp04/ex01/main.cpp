@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:36:37 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/05 14:38:24 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:23:39 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,31 +47,3 @@ int main()
 	for (int j = 0; j < 5; j++)
 		delete Animaux[j];
 }
-
-/*int main()
-{
-	Animal	*Murloc = new Animal();
-	Animal	*Tupac = new Dog();
-	Animal	*Kimy = new Cat();
-	WrongAnimal	*meta = new WrongAnimal();
-	WrongAnimal *i = new WrongCat();
-
-
-	std::cout << Tupac->get_type() << " " << std::endl;
-	std::cout << Kimy->get_type() << " " << std::endl;
-	std::cout << i->get_type() << " " << std::endl;
-
-
-	Tupac->makeSound();
-	Kimy->makeSound();
-	Murloc->makeSound();
-	meta->makeSound();
-	i->makeSound();
-
-	delete Murloc;
-	delete Tupac;
-	delete Kimy;
-	delete meta;
-	delete i;
-	return 0;
-}*/

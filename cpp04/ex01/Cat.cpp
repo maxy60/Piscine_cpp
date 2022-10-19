@@ -6,13 +6,13 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/28 14:22:51 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/05 14:40:37 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/19 17:21:17 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal()
+Cat::Cat()
 {
 	this->_type = "Cat";
     this->_idea = new Brain();
@@ -20,7 +20,7 @@ Cat::Cat() : Animal()
 	return ;
 }
 
-Cat::Cat(Cat const &src) : Animal::Animal(src)
+Cat::Cat(Cat const &src)
 {
 	this->_type = src.get_type();
 	this->_idea = new Brain();
@@ -44,7 +44,6 @@ Cat & Cat::operator=(Cat const &rhs)
 
 Animal & Cat::operator=(Animal const &rhs)
 {
-	this->_type = rhs.get_type();
 	*(this->_idea) = *(rhs.get_brain());
 	return (*this);
 }
