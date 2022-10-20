@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:11:43 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/19 15:28:29 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/20 10:20:19 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,6 @@ Bureaucrat::Bureaucrat(Bureaucrat const &src) : _name(src._name), _grade(src._gr
 
 Bureaucrat & Bureaucrat::operator=(Bureaucrat const &rhs)
 {
-   // *((std::string *)&rhs._name) = rhs._name;
     this->_grade = rhs.getGrade();
     return (*this);
 }
@@ -111,5 +110,4 @@ void	Bureaucrat::signForm(Form const &form) const
 	{
 		std::cerr << this->getName() << " couldn't sign " << form.getName() << " because " << e.what() << std::endl;
 	}
-	
 }

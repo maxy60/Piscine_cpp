@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:28:47 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/10 16:25:25 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/20 10:13:43 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,15 +77,29 @@ void	Form::beSigned(Bureaucrat const &bur)
         throw(Form::GradeTooLowException());
 }
 
+void    Form::setSF(bool signedF)
+{
+    this->_signed_form = signedF;
+}
+
+void    Form::setGS(int signedG)
+{
+    this->_grade_signed = signedG;
+}
+
+void    Form::setES(int signedE)
+{
+    this->_exe_signed = signedE;
+}
 
 const char *Form::GradeTooHighException::what() const throw()
 {
-    return ("Form can't required a grade that low");
+    return ("Grade to low");
 }
 
 const char *Form::GradeTooLowException::what() const throw()
 {
-    return ("Form can't required a grade that low");
+    return ("Grade to high");
 }
 
 std::ostream	&operator<<(std::ostream &o, Form const &src)

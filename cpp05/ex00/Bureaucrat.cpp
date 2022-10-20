@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:11:43 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/17 11:23:45 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/20 09:43:46 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ Bureaucrat::~Bureaucrat()
 
 Bureaucrat::Bureaucrat(Bureaucrat const &src) : _name(src._name), _grade(src._grade)
 {
-    std::cout << "Bureaucrat : copie constructor called" << std::endl;
     *this = src;
+    std::cout << "Bureaucrat : copie constructor called" << std::endl;
     return ;
 }
 
@@ -68,12 +68,12 @@ void    Bureaucrat::setGrade(int i)
 
 const char *Bureaucrat::GradeTooHighException::what() const throw()
 {
-    return ("Bureaucrat Grade is to High");
+    return ("he can't have a grade that low");
 }
 
 const char *Bureaucrat::GradeTooLowException::what() const throw()
 {
-    return ("Bureaucrat Grade is to Low");
+    return ("he can't have a grade that high");
 }
 
 void    Bureaucrat::upGrade()

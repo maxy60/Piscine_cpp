@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:24:30 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/10 15:22:02 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/20 09:44:11 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ int main()
     }
     catch (Bureaucrat::GradeTooHighException &e)
     {
-        std::cout << "he can't have a grade that low" << std::endl;
+        std::cerr << e.what() << std::endl;
     }
     catch (Bureaucrat::GradeTooLowException &e)
     {
-        std::cout << "he can't have a grade that high" << std::endl;
+        std::cerr << e.what() << std::endl;
     }
         try {
         Bureaucrat Newboss(2, "Jeff");
@@ -38,10 +38,10 @@ int main()
     }
     catch (Bureaucrat::GradeTooHighException &e)
     {
-        std::cout << "he can't have a grade that low" << std::endl;
+        std::cerr << e.what() << std::endl;
     }
     catch (Bureaucrat::GradeTooLowException &e)
     {
-        std::cout << "he can't have a grade that high" << std::endl;
+        std::cerr << e.what() << std::endl;
     }
 }

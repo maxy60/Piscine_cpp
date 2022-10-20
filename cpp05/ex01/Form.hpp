@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:28:04 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/10 16:05:23 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/20 09:54:55 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ public:
 	bool				getSF() const;
 	int					getGS() const;
 	int					getES() const;
+    void                setSF(bool signedF);
+    void                setGS(int signedG);
+    void                setES(int signedE);
+    
 	class GradeTooHighException : public std::exception
     {
         public:

@@ -1,14 +1,11 @@
-NAME	=	serialisation
+NAME	=	start
 
 			
 SRCS	=	main.cpp			\
-			Data.cpp
 
 CC		=	c++
 
 CFLAGS	=	-Wall -Wextra -Werror -std=c++98
-
-INCLUDE =	Data.hpp
 
 OBJS	=	$(SRCS:.cpp=.o)
 
@@ -18,7 +15,7 @@ OBJS	=	$(SRCS:.cpp=.o)
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
-		$(CC) $(CFLAGS) $(OBJS) -I include -o $(NAME)
+		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
 clean:
 		rm -f $(OBJS)
