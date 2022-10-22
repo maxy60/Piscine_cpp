@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 12:19:28 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/21 16:58:05 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/22 19:54:46 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,13 +28,13 @@ public:
 template< typename T>
 Array<T>::Array()
 {
-    _tab[] = new [] T;
+    _tab = new [] T;
 }
 
 template< typename T>
 Array<T>::Array(unsigned int n)
 {
-    _tab = 
+    _tab = new	T[n];
 }
 
 template< typename T>

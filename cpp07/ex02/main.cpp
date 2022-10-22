@@ -6,7 +6,13 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 12:19:02 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/21 14:34:45 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/22 19:56:12 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Array.hpp"
+
+int main()
+{
+	Array test = Array();
+}
