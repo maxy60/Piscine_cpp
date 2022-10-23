@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:28:47 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/20 10:13:43 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:43:01 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ Form::Form() : _name("Default")
     return ;
 }
 
-Form::Form(std::string name, bool sf, int const  gs, int const es) : _name(name), _signed_form(sf), _grade_signed(gs), _exe_signed(es)
+Form::Form(std::string name, int const  gs, int const es) : _name(name), _signed_form(false), _grade_signed(gs), _exe_signed(es)
 {
 	if (_grade_signed > 150 || _exe_signed > 150)
         throw(Form::GradeTooHighException());

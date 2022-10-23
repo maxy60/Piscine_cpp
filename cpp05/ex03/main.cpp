@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:24:30 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/13 16:52:30 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:55:15 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,11 @@ int main()
 	try
 	{
 		Intern Larbin;
+        Bureaucrat employed(20, "Joey");
 		AForm	*srf;
 		srf = Larbin.makeForm("shrubbery request", "forest");
+        srf->beSigned(employed);
+		srf->execute(employed);
 		delete srf;
 	}
 	catch(const std::exception& e)

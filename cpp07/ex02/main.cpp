@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 12:19:02 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/22 19:56:12 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/23 11:05:55 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,6 @@
 
 int main()
 {
-	Array test = Array();
+	Array<int> test = Array<int>();
+    Array<int> test1 = Array<int>(5);
 }

@@ -6,21 +6,21 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 09:39:20 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/11 16:08:33 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:57:19 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
 #include <fstream>
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm(target, 0, 145, 137)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target) : AForm(target, 145, 137)
 {
 	_target = target;
 	std::cout << "ShrubberyCreationForm : Default constructor called" << std::endl;
 	return ;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &src)
+ShrubberyCreationForm::ShrubberyCreationForm(ShrubberyCreationForm const &src) : AForm(src.getTarget(), 145, 137)
 {
 	std::cout << "ShrubberyCreationForm : copie constructor called" << std::endl;
 	*this = src;
@@ -55,6 +55,17 @@ void	ShrubberyCreationForm::beExec() const
 		return ;
     }
 	std::cout << "create shrub in " << _target << std::endl;
-	forest << "*BIG TREE*" << std::endl;
+    forest <<"                         "<< std::endl; 
+    forest <<"     ccee88oo            "<< std::endl; 
+    forest <<"  C8O8O8Q8PoOb o8oo      "<< std::endl;     
+    forest <<" dOB69QO8PdUOpugoO9bD    "<< std::endl;     
+    forest <<"CgggbU8OU qOp qOdoUOdcb  "<< std::endl;         
+    forest <<"    6OuU  /p u gcoUodpP  "<< std::endl;     
+    forest <<"      111//  /douUP      "<< std::endl;     
+    forest <<"        111////          "<< std::endl; 
+    forest <<"         |||/1           "<< std::endl; 
+    forest <<"         |||1/           "<< std::endl; 
+    forest <<"         |||||           "<< std::endl; 
+    forest <<"   .....//||||1....      "<< std::endl;     
 	return ;
 }

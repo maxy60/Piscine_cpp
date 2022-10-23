@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:24:30 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/20 10:02:42 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:44:13 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int main()
     try {
         Bureaucrat employe;
         employe.setGrade(20);
-		Form formulaire_err("Wrong", false, 0, 10);
+		Form formulaire_err("Wrong", 0, 10);
     }
 	catch (const std::exception &e)
 	{
@@ -34,7 +34,7 @@ int main()
 		std::cout << Newboss;
 		Newboss.upGrade();
 		std::cout << Newboss;
-		Form form("Big FORM", false, 2, 10);
+		Form form("Big FORM", 2, 10);
 		std::cout << form;
 		form.beSigned(Newboss);
 		std::cout << form;
@@ -47,7 +47,7 @@ int main()
 	try
 	{
 		Bureaucrat looser(149, "Stifler");
-		Form form("Big FORM", false, 2, 10);
+		Form form("Big FORM", 2, 10);
 		form.beSigned(looser);
 	}
 	catch(const std::exception& e)
@@ -58,7 +58,7 @@ int main()
 	try
 	{
 		Bureaucrat Chandler(19, "Chandler");
-		Form form("Big FORM", false, 2, 10);
+		Form form("Big FORM", 2, 10);
 		Chandler.signForm(form);
 	}
 	catch(const std::exception& e)

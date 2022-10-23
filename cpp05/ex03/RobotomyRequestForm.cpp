@@ -6,20 +6,20 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 15:25:23 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/11 16:14:25 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:53:04 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm(target, 0, 72, 45)
+RobotomyRequestForm::RobotomyRequestForm(std::string target) : AForm(target, 72, 45)
 {
 	_target = target;
 	std::cout << "RobotomyRequestForm : Default constructor called" << std::endl;
 	return ;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &src)
+RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const &src) : AForm(src.getTarget(), 72, 45)
 {
 	std::cout << "RobotomyRequestForm : copie constructor called" << std::endl;
 	*this = src;

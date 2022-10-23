@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:28:04 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/11 15:41:08 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/23 12:51:30 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ private:
 	int			_exe_signed;
 public:
 	AForm();
-	AForm(std::string name, bool sf, int const gs, int const es);
+	AForm(std::string name, int const gs, int const es);
 	AForm(AForm const &src);
 	virtual AForm & operator=(AForm const &rhs);
 	virtual ~AForm() = 0;
