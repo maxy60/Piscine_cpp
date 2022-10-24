@@ -5,14 +5,17 @@ SRCS	=	main.cpp			\
 
 CC		=	c++
 
-CFLAGS	=	-Wall -Wextra -Werror -std=c++98
+CFLAGS	=	-Wall -Wextra -Werror -std=c++98 -MMD -MP
 
 OBJS	=	$(SRCS:.cpp=.o)
+DEPS = $(OBJS:.o=.d)
 
 %.o:		%.cpp
 		$(CC) $(CFLAGS) -c $< -o $@
 
 all:		$(NAME)
+
+-include $(DEPS)
 
 $(NAME):	$(OBJS)
 		$(CC) $(CFLAGS) $(OBJS) -o $(NAME)

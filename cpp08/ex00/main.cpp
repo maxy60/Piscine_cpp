@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/24 14:54:04 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/24 21:36:48 by msainton         ###   ########.fr       */
+/*   Created: 2022/10/24 20:51:16 by msainton          #+#    #+#             */
+/*   Updated: 2022/10/24 21:30:48 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-# define EASYFIND_HPP
+#include "easyfind.hpp"
+#include <vector>
 
-#include <iostream>
-#include <algorithm>
-
-template<typename T>
-int    easyfind(T container, int n)
+int main()
 {
-    typename T::const_iterator test;
-    test = find(container.begin(), container.end(), n);
-    if (container.end() == test)
-        throw(0);
-    return *test;
+    std::vector<int> my_vector;
+    my_vector.push_back(42);
+    easyfind(my_vector, 42);
 }
-
-#endif
