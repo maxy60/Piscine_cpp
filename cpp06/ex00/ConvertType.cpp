@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:58:44 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/24 18:54:13 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/24 19:16:00 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,11 @@ ConvertType::ConvertType(ConvertType const &src)
 
 ConvertType & ConvertType::operator=(ConvertType const &rhs)
 {
-	(void)rhs;
+    this->_str = rhs._str;
+    this->_c = rhs._c;
+    this->_d = rhs._d;
+    this->_i = rhs._i;
+    this->_f = rhs._f;
 	return (*this);
 }
 
