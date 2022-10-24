@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:58:44 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/16 12:58:17 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:54:13 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,26 +53,26 @@ void	ConvertType::Good_type()
 		return ;
 	}
 	strtol(_str, &i, 10);
-	if (!(*i))
+	if (!(*i) && strb.length() < 19)
 	{
 		int_convert();
 		return ;
 	}
-	strtod(_str, &d);
+	strtod(this->_str, &d);
 	if (!(*d))
 	{
 		double_convert();
 		return ;
 	}
 	int iter = 0;
-	while (_str[iter])
+	while (this->_str[iter])
 		iter++;
-	if (_str[iter -1] == 'f')
+	if (this->_str[iter -1] == 'f')
 	{
 		strb.erase(iter -1);
 		_str = const_cast<char *>(strb.c_str());	
 	}
-	strtof(_str, &f);
+	strtof(this->_str, &f);
 	if (!(*f))
 	{
 		float_convert();
@@ -87,34 +87,51 @@ void	ConvertType::Good_type()
 void	ConvertType::char_convert()
 {
 	this->_c = _str[0];
-	this->_i = static_cast<int>(_c);
-	this->_f = static_cast<float>(_c);
-	this->_d = static_cast<double>(_c);
+	this->_i = static_cast<int>(this->_c);
+	this->_f = static_cast<float>(this->_c);
+	this->_d = static_cast<double>(this->_c);
 	print();
 }
 
 void	ConvertType::int_convert()
 {
-	this->_i = atoi(_str);
-	this->_c = static_cast<char>(_i);
-	this->_f = static_cast<float>(_i);
-	this->_d = static_cast<double>(_i);
-	print();
+    long tmp = atol(this->_str);
+    std::cout << "char: ";
+	if (tmp > CHAR_MAX || tmp < 32)
+		std::cout << "Non displayable" << std::endl;
+	else
+    {
+        this->_c = static_cast<char>(tmp);
+		std::cout << "'" << this->_c << "'" << std::endl;
+    }
+    std::cout << "int: ";
+    if (tmp > INT_MAX || tmp < INT_MIN)
+        std::cout << "impossible" << std::endl;
+    else
+    {
+        this->_i = atoi(this->_str);
+        std::cout << this->_i << std::endl;
+    }
+	this->_f = static_cast<float>(tmp);
+    std::cout << "float: " << std::fixed << std::setprecision(1) << this->_f << "f" << std::endl;
+    this->_d = static_cast<double>(tmp);
+	std::cout << "double: " << std::fixed << std::setprecision(1) << this->_d << std::endl;
+
 }
 
 void	ConvertType::float_convert()
 {
-	this->_f = atof(_str);
-	this->_c = static_cast<char>(_f);
-	this->_i = static_cast<int>(_f);
-	this->_d = static_cast<double>(_f);
+	this->_f = atof(this->_str);
+	this->_c = static_cast<char>(this->_f);
+	this->_i = static_cast<int>(this->_f);
+	this->_d = static_cast<double>(this->_f);
 	print();
 }
 
 void	ConvertType::double_convert()
 {
 	char	*endptr;
-	this->_d = strtod(_str, &endptr);
+	this->_d = strtod(this->_str, &endptr);
 	this->_i = static_cast<int>(_d);
 	this->_f = static_cast<float>(_d);
 	this->_c = static_cast<char>(_d);
@@ -131,10 +148,10 @@ void	ConvertType::print()
 	else
 		std::cout << "'" << this->_c << "'" << std::endl;
 	std::cout << "int: "; 
-	if (this->_i > INT_MAX || this->_i < INT_MIN || isnan(this->_d))
+	if (this->_d > INT_MAX || this->_d < INT_MIN || isnan(this->_d))
 		std::cout << "impossible" << std::endl;
 	else
 		std::cout << this->_i << std::endl;
-	std::cout << "float: " << this->_f << "f" << std::endl;
-	std::cout << "double: " << this->_d << std::endl;
+	std::cout << "float: " << std::fixed << std::setprecision(1) << this->_f << "f" << std::endl;
+	std::cout << "double: " << std::fixed << std::setprecision(1) << this->_d << std::endl;
 }

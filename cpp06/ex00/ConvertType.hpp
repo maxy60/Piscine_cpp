@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/15 16:58:38 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/16 12:44:34 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/24 18:34:24 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <cstdlib>
 #include <limits.h>
 #include <math.h>
+#include <iomanip>
 
 class ConvertType
 {
@@ -21,7 +22,7 @@ private:
 	char	*_str;
 	char	_c;
 	int		_i;
-	float	_f;
+	float 	_f;
 	double	_d;
 public:
 	ConvertType();
