@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:04:51 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/12 17:41:58 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:17:30 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,11 @@ AForm	*Intern::presidential(std::string target)
 	return (request);
 }
 
+const char *Intern::FormDoesntExist::what() const throw()
+{
+    return ("this form doesnt exist");
+}
+
 AForm *Intern::makeForm(std::string name, std::string target)
 {
 	std::string names[3] = {"robotomy request", "shrubbery request", "presidential request"};
@@ -67,13 +72,10 @@ AForm *Intern::makeForm(std::string name, std::string target)
 		&Intern::shrubbery,
 		&Intern::presidential,
 	};
-
 	int i = 0;
 	while (name != names[i] && i <= 2)
 		i++;
 	if (name == names[i])
 		return((this->*monpointeur[i])(target));
-	else
-		std::cerr << "thist type of form doesnt exist" << std::endl;
-	return (0);
+    throw(Intern::FormDoesntExist());
 }

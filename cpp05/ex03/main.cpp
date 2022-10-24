@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:24:30 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/23 12:55:15 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:18:15 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main()
 		Bureaucrat employed(20, "Joey");
 		Intern Larbin;
 		AForm	*rrf;
-		rrf = Larbin.makeForm("robotomy request", "Bender");
+		rrf = Larbin.makeForm("robotomy riquest", "Bender");
 		rrf->beSigned(employed);
 		rrf->execute(employed);
 		delete rrf;

@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 12:19:02 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/23 21:32:10 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:28:51 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,18 +15,15 @@
 #include "cstdlib"
 #define MAX_VAL 750
 
- /*int main()
+ int main()
  {
      Array<int> test(10);
      test[6] = 1;
      std::cout << test[6] << std::endl;
-     {
-         Array<int> tmp = test;
-         Array<int> test2(tmp);
-     }
- }*/
+     Array<int> test2 = test; 
+}
 
-int main(int, char**)
+/*int main(int, char**)
 {
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
@@ -74,4 +71,4 @@ int main(int, char**)
     }
     delete [] mirror;
     return 0;
-}
+}*/

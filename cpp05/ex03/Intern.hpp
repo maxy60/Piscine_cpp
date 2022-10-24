@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 18:04:38 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/12 17:36:39 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/24 14:11:21 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ public:
 	Intern	& operator=(Intern const &rhs);
 	~Intern();
 	AForm *makeForm(std::string name, std::string target);
+    class   FormDoesntExist : public std::exception
+    {
+        public:
+            virtual const char *what() const throw();
+    };
 };
 
 #endif

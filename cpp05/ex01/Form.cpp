@@ -6,13 +6,13 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 11:28:47 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/23 12:43:01 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/24 12:16:43 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Form.hpp"
 
-Form::Form() : _name("Default")
+Form::Form() : _name("Default"), _signed_form(false), _grade_signed(150), _exe_signed(150) 
 {
     std::cout << "Form : Default constructor called" << std::endl;
     return ;
@@ -44,8 +44,6 @@ Form::Form(Form const &src) : _name(src._name), _signed_form(src._signed_form), 
 Form & Form::operator=(Form const &rhs)
 {
 	this->_signed_form = rhs.getSF();
-	this->_grade_signed = rhs.getGS();
-	this->_exe_signed = rhs.getES();
 	return (*this);
 }
 
@@ -80,16 +78,6 @@ void	Form::beSigned(Bureaucrat const &bur)
 void    Form::setSF(bool signedF)
 {
     this->_signed_form = signedF;
-}
-
-void    Form::setGS(int signedG)
-{
-    this->_grade_signed = signedG;
-}
-
-void    Form::setES(int signedE)
-{
-    this->_exe_signed = signedE;
 }
 
 const char *Form::GradeTooHighException::what() const throw()
