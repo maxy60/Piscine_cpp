@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 10:05:48 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/25 14:16:24 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:25:54 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ int     Span::longestSpan()
         std::vector<int> tmp = this->span;
 }*/
 
-void    Span::init(size_t n)
+/*void    Span::init(size_t n)
 {
-}
+    
+}*/

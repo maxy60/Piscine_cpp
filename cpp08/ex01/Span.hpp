@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 10:05:58 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/25 14:16:30 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/25 14:26:04 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ public:
     Span(Span const &src);
     Span &  operator=(Span const &rhs);
     ~Span();
-    void    init(size_t n);
+    //void    init(size_t n);
     void    addNumber(int n);
     int     shortestSpan();
     int     longestSpan();
