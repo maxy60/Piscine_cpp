@@ -6,7 +6,7 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 10:05:48 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/25 14:25:54 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/25 20:13:48 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,33 +52,31 @@ const char *    Span::SpanIsTooShort::what() const throw()
 
 void    Span::addNumber(int n)
 {
-    try
-    {
-        if (this->span.size() == this->_N)
-            throw(Span::SpanIsFull());
-        this->span.push_back(n);
-    }
-    catch(const std::exception& e)
-    {
-        std::cerr << e.what() << '\n';
-    }
+   if (this->span.size() == this->_N)
+        throw(Span::SpanIsFull());
+    this->span.push_back(n);
 }
 
-/*int     Span::shortestSpan()
+int     Span::shortestSpan()
 {
     if (this->span.size() <= 1)
         throw(Span::SpanIsTooShort());
-    
+    std::vector<int> tmp = this->span;
+    sort(tmp.begin(), tmp.end());
+    //return (*adjacent_difference(tmp.begin(), tmp.end(), ));
 }
 
 int     Span::longestSpan()
 {
-        if (this->span.size() <= 1)
-            throw(Span::SpanIsTooShort());
-        std::vector<int> tmp = this->span;
-}*/
+    if (this->span.size() <= 1)
+        throw(Span::SpanIsTooShort());
+    return ((*max_element(this->span.begin(), this->span.end()) - *min_element(this->span.begin(), this->span.end())));
+}
 
-/*void    Span::init(size_t n)
+void    Span::init(int n1, int n2)
 {
-    
-}*/
+    if ((n2 - n1) > static_cast<int>(this->_N))
+        throw(SpanIsFull());
+    while (n1 < n2)
+        span.push_back(n1++);
+}
