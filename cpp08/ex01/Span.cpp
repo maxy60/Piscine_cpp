@@ -6,12 +6,11 @@
 /*   By: msainton <msainton@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/25 10:05:48 by msainton          #+#    #+#             */
-/*   Updated: 2022/10/25 20:13:48 by msainton         ###   ########.fr       */
+/*   Updated: 2022/10/26 18:45:36 by msainton         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
-#include <algorithm>
 
 Span::Span() : _N(0)
 {
@@ -63,7 +62,17 @@ int     Span::shortestSpan()
         throw(Span::SpanIsTooShort());
     std::vector<int> tmp = this->span;
     sort(tmp.begin(), tmp.end());
-    //return (*adjacent_difference(tmp.begin(), tmp.end(), ));
+    std::vector<int>::iterator  it = tmp.begin();
+    std::vector<int>::iterator ite = tmp.end();
+    int tmp1 = *(it + 1) - *it;
+    int tmp2;
+    for (; it != ite -1; it++)
+    {
+        tmp2 = *(it + 1) - *it;
+        if (tmp2 < tmp1)
+            tmp1 = tmp2;
+    }
+    return tmp1;
 }
 
 int     Span::longestSpan()
@@ -73,10 +82,15 @@ int     Span::longestSpan()
     return ((*max_element(this->span.begin(), this->span.end()) - *min_element(this->span.begin(), this->span.end())));
 }
 
-void    Span::init(int n1, int n2)
+void    Span::init(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-    if ((n2 - n1) > static_cast<int>(this->_N))
+    if ( std::distance<std::vector<int>::iterator >(begin, end) > static_cast<int>(this->_N))
         throw(SpanIsFull());
-    while (n1 < n2)
-        span.push_back(n1++);
+    while (begin != end)
+        span.push_back(*begin++);
+}
+
+std::vector<int> & Span::getvec(void)
+{
+    return (span);
 }
